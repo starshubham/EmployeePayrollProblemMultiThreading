@@ -1,0 +1,7 @@
+.vs/
+bin/
+obj/
+EmployeePayrollSystemThreads.sln
+EmployeePayrollSystemThreads.csproj
+EmployeePayrollTest.csproj
+TestResults/
