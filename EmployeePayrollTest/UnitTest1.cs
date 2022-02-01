@@ -23,7 +23,14 @@ namespace EmployeePayrollTest
             employeeDetails.Add(new EmployeeDetails(EmployeeID: 8, EmployeeName: "Marval", PhoneNumber: "9999999999", Address: "XYZ", Department: "Marketing", Gender: 'M', BasicPay: 100000, Deductions: 1000, TaxablePay: 20, Tax: 100, NetPay: 90000, startDate: new System.DateTime(2021, 08, 15),  City: "Varanasi", Country: "India"));
             employeeDetails.Add(new EmployeeDetails(EmployeeID: 9, EmployeeName: "Bruce", PhoneNumber: "9999999999", Address: "XYZ", Department: "Production", Gender: 'M', BasicPay: 100000, Deductions: 1000, TaxablePay: 20, Tax: 100, NetPay: 90000, startDate: new System.DateTime(2021, 08, 23),  City: "Varanasi", Country: "India"));
             employeeDetails.Add(new EmployeeDetails(EmployeeID: 10, EmployeeName: "Banner", PhoneNumber: "9999999999", Address: "XYZ", Department: "HR", Gender: 'M', BasicPay: 100000, Deductions: 1000, TaxablePay: 20, Tax: 100, NetPay: 90000, startDate: new System.DateTime(2022, 02, 01),  City: "Varanasi", Country: "India"));
-           
+
+            //UC1
+            EmployeePayrollOperations employeePayrollOperations = new EmployeePayrollOperations();
+            DateTime startDateTime = DateTime.Now;
+            employeePayrollOperations.addEmployeeToPayroll(employeeDetails);
+            DateTime stopDateTime = DateTime.Now;   
+            Console.WriteLine("Duration without thread: " + (stopDateTime - startDateTime));
+
         }
     }
 }
